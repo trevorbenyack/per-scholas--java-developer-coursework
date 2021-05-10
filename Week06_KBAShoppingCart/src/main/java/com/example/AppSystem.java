@@ -26,7 +26,7 @@ public class AppSystem extends TheSystem {
     public Boolean add(Item item) {
         if (item == null) {
             return false;
-        } else if(getItemCollection().containsKey(item.getItemName())) {
+        } else if (getItemCollection().containsKey(item.getItemName())) {
             System.out.println(item.getItemName() + " is already in the App System");
             return false;
         } else if (!getItemCollection().containsKey(item.getItemName())) {
