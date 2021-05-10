@@ -8,7 +8,6 @@ import java.util.Scanner;
 public abstract class TheSystem {
 
     private HashMap<String, Item> itemCollection;
-    final private int ITEMS_PER_TRANSACTION = 1;
 
     TheSystem() {
         itemCollection = new HashMap<>();
@@ -38,7 +37,7 @@ public abstract class TheSystem {
     
     public Boolean checkAvailability(Item item) {
 
-        if(ITEMS_PER_TRANSACTION > item.getAvailableQuantity()) {
+        if(item.getQuantity() > item.getAvailableQuantity()) {
             System.out.println("System is unable to add " + item.getItemName() + " to the cart. System only " +
                     "has " + item.getAvailableQuantity() + " " + item.getItemName() + "(s).");
             return false;

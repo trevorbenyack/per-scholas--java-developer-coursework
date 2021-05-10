@@ -13,8 +13,8 @@ public class CartSystem extends TheSystem {
         Double total = 0.00;
 
 
-        System.out.println("Cart");
-        System.out.printf("%-20s%-20s%-10s%-10s%-10s%n",
+        System.out.println("Cart:");
+        System.out.printf("%-20s %-20s %-10s %-10s %-10s%n",
                 "Name",
                 "Description",
                 "Price",
@@ -35,9 +35,9 @@ public class CartSystem extends TheSystem {
         tax = subTotal * 0.05;
         total = subTotal + tax;
 
-        System.out.printf("%-20s%20.2f%n", "Pre-tax Total", subTotal);
-        System.out.printf("%-20s%20.2f%n", "Tax", tax);
-        System.out.printf("%-20s%20.2f%n", "Total", total);
+        System.out.printf("%-21s%-20.2f%n", "Pre-tax Total", subTotal);
+        System.out.printf("%-21s%-20.2f%n", "Tax", tax);
+        System.out.printf("%-21s%-20.2f%n", "Total", total);
 
     }
 }

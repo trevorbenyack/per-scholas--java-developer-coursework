@@ -7,14 +7,14 @@ public class AppSystem extends TheSystem {
 
     @Override
     public void display() {
-        System.out.println("AppSystem Inventory");
-        System.out.printf("%-20s%-20s%-10s%-10s%n",
+        System.out.println("AppSystem Inventory:");
+        System.out.printf("%-20s %-20s %-10s %-10s%n",
                 "Name",
                 "Description",
                 "Price",
                 "Available Quantity");
         for(Item i : getItemCollection().values()) {
-            System.out.printf("%-20s%-20s%-10.2f%-10d%n",
+            System.out.printf("%-20s %-20s %-10.2f %-10d%n",
                     i.getItemName(),
                     i.getItemDesc(),
                     i.getItemPrice(),
@@ -42,6 +42,11 @@ public class AppSystem extends TheSystem {
             Item tempItem = getItemCollection().get(item_name);
             tempItem.setAvailableQuantity(tempItem.getAvailableQuantity() - 1);
             getItemCollection().replace(item_name, tempItem);
+
+            if(tempItem.getAvailableQuantity() == 0) {
+                getItemCollection().remove(item_name);
+            }
+
             return tempItem;
         } else {
             return null;
