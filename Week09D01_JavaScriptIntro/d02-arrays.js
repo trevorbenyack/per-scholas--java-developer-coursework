@@ -4,7 +4,7 @@ console.log(fruits);
 fruits.splice(2, 0, "lemon", "kiwi");
 console.log(fruits);
 
-// wtf?
+// FOR/OF VS FOR/IN
 var numbers = [1, 2, 3, 4];
 var squares = [];
 // for(let i = 0; i < numbers.length; i++) {
@@ -35,28 +35,27 @@ for (x in person) {
   console.log(x);
 }
 
+// LOOPS IN JAVASCRIPT
 
-// console.log(input);
+console.log(prompt("Enter an integer"));
 
-// console.log(prompt("Enter an integer"));
+if (input > 0 && input < 100) {
+    console.log("that's right!");
+}
 
-// if (input > 0 && input < 100) {
-//     console.log("that's right!");
-// }
-
-// let input = prompt("Enter an integer");
-// let exit = true;
-// while (exit) {
+let input = prompt("Enter an integer");
+let exit = true;
+while (exit) {
     
-//     if(input < 0 || input > 100) {
-//         input = prompt("Please re-enter");
-//     } else {
-//         exit = false;
-//     }
+    if(input < 0 || input > 100) {
+        input = prompt("Please re-enter");
+    } else {
+        exit = false;
+    }
 
 
-// } 
-// console.log("good job!");
+} 
+console.log("good job!");
 
 var a = [1, 2, 3];
 

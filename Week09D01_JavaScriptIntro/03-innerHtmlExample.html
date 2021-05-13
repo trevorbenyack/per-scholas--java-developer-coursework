@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script type="text/javascript">
+            function showCommentForm() {
+                var data = "Your location is USA";
+                document.getElementById('mylocation').innerHTML = data;
+            }
+        </script>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0" crossorigin="anonymous">
+    </head>
+
+    <body>
+        <div style="margin: 10px">Your location will show below. Please click on the button:</div>
+        <button type="button" class="btn btn-primary" onclick="showCommentForm()" style="margin: 10px">
+            Show My Location
+        </button>
+        <br>
+        <div id="mylocation" style="margin: 10px"></div>
+    </body>
+</html>
