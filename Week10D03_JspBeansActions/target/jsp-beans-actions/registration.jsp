@@ -11,21 +11,21 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <title>Registration Page</title>
 </head>
-<% if (request.getParameter("submit") != null) {%>
-    <jsp:forward page="success.jsp">
-        <jsp:param name="message" value="Registration successful"/>
-    </jsp:forward>
-<% } %>
 <%
     String passwordValid = "";
     if (request.getParameter("submit") != null) {
         if (request.getParameter("password").equals("")) {
             passwordValid = "Password cannot be null";
         } else {
-            response.sendRedirect("details.jsp");
+%>
+    <jsp:forward page="success.jsp">
+        <jsp:param name="message" value="Registration successful"/>
+    </jsp:forward>
+<%
         }
     }
 %>
+
 <body>
 <form class="d-grid gap-3 p-3 mt-3" style="
     width: 30%;
